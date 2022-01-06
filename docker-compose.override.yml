@@ -1,0 +1,10 @@
+version: '3.5'
+volumes:
+  postgres:
+    driver: local
+    driver_opts:
+      device: ":/mnt/storage/.app_data/postgres"
+  pgadmin:
+    driver: local
+    driver_opts:
+      device: ":/mnt/storage/.app_data/pgadmin"
