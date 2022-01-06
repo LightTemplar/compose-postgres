@@ -3,8 +3,10 @@ volumes:
   postgres:
     driver: local
     driver_opts:
+      type: nfs4
       device: ":/mnt/storage/.app_data/postgres"
   pgadmin:
     driver: local
     driver_opts:
+      type: nfs4
       device: ":/mnt/storage/.app_data/pgadmin"
