@@ -3,10 +3,12 @@ volumes:
   postgres:
     driver: local
     driver_opts:
-      type: nfs4
+      type: none
+      o: bind
       device: ":/mnt/storage/.app_data/postgres"
   pgadmin:
     driver: local
     driver_opts:
-      type: nfs4
+      type: none
+      o: bind
       device: ":/mnt/storage/.app_data/pgadmin"
