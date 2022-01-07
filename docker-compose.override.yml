@@ -1,13 +1,21 @@
 version: '3.5'
+
+services:
+  postgres:
+    container_name: postgres_db
+
 volumes:
   postgres:
     driver: local
     driver_opts:
       type: none
+      o: bind
       
-      device: ":/mnt/storage/.app_data/postgres"
+      device: /mnt/storage/.app_data/postgres
   pgadmin:
     driver: local
     driver_opts:
       type: none
-      device: ":/mnt/storage/.app_data/pgadmin"
+      o: bind
+      device: /var/local/pgadmin
+      # device: ":/mnt/storage/.app_data/pgadmin"
