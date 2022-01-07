@@ -2,7 +2,7 @@ version: '3.5'
 
 services:
   postgres:
-    container_name: db
+    container_name: postgres_db
     
     # ports: "12432:5432"
     environment:
@@ -10,7 +10,7 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-BestCrockEver78}
 
   pgadmin:
-    container_name: web
+    container_name: postgres_pgadmin
     # ports:
     #  - "12480:80"
     environment:
